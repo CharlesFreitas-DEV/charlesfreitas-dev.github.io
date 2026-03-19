@@ -9,7 +9,6 @@
     color: #ffffff;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    text-align: center;
     margin: 0;
     padding: 0 20px;
   }
@@ -17,6 +16,7 @@
   h2, h3 {
     margin-top: 40px;
     margin-bottom: 20px;
+    text-align: center;
   }
 
   a {
@@ -49,11 +49,64 @@
     transform: scale(1.05);
   }
 
+  .sobre-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+  }
+
+  .sobre-list {
+    text-align: left;
+    max-width: 500px;
+  }
+
+  .sobre-list ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .sobre-list li {
+    margin-bottom: 10px;
+  }
+
+  .sobre-list li::before {
+    content: "• ";
+    color: #ffffff;
+  }
+
+  .sobre-photo img {
+    border-radius: 20px;
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .sobre-photo img:hover {
+    box-shadow: 0 0 20px 5px #6366f1; /* glow azul suave */
+    transform: scale(1.05);
+  }
+
   hr {
     border: 0;
     height: 1px;
     background: #ffffff33;
     margin: 40px 0;
+  }
+
+  /* Media query para telas pequenas */
+  @media (max-width: 768px) {
+    .sobre-container {
+      flex-direction: column; /* empilha verticalmente */
+      align-items: center;
+    }
+    .sobre-list {
+      text-align: center;
+    }
   }
 </style>
 </head>
@@ -71,30 +124,37 @@
 <hr>
 
 <h2>👨‍🏫 Sobre</h2>
-<p>
-Professor de programação focado em:
-</p>
-<ul style="text-align:left; display:inline-block;">
-  <li>🧠 Estruturas de Dados</li>
-  <li>🐍 Python aplicado</li>
-  <li>🤖 Inteligência Artificial</li>
-  <li>🌐 Automação e IoT com Arduino e Raspberry Pi</li>
-  <li>🗄️ Banco de Dados (PostgreSQL)</li>
-  <li>🌍 Banco de Dados Georreferenciado</li>
-  <li>📊 Análise de Dados</li>
-</ul>
+<div class="sobre-container">
+  <!-- Foto -->
+  <div class="sobre-photo">
+    <img src="SUA_FOTO_URL_AQUI" alt="Foto do CharlesFreitas DEV">
+  </div>
+
+  <!-- Lista de tópicos -->
+  <div class="sobre-list">
+    <p>Professor de programação focado em:</p>
+    <ul>
+      <li>🧠 Estruturas de Dados</li>
+      <li>🐍 Python aplicado</li>
+      <li>🤖 Inteligência Artificial</li>
+      <li>🌐 Automação e IoT com Arduino e Raspberry Pi</li>
+      <li>🗄️ Banco de Dados (PostgreSQL)</li>
+      <li>🌍 Banco de Dados Georreferenciado</li>
+      <li>📊 Análise de Dados</li>
+    </ul>
+  </div>
+</div>
 
 <hr>
 
-<h2>📁 Repositórios</h2>
-
+<h2>📁 Popular Repositories</h2>
 <p align="center">
 <a href="https://github.com/CharlesFreitas-DEV/Python" target="_blank" style="text-decoration:none;">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=CharlesFreitas-DEV&repo=Python&theme=tokyonight&border_radius=20&bg_color=1e1e2f&title_color=ffffff&show_owner=true" style="filter: drop-shadow(3px 3px 5px rgba(0,0,0,0.5)); transition: transform 0.2s;" />
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=CharlesFreitas-DEV&repo=Python&theme=tokyonight&border_radius=20&bg_color=1e1e2f&title_color=ffffff&show_owner=true" class="repos" />
 </a>
 
 <a href="https://github.com/CharlesFreitas-DEV/IoT" target="_blank" style="text-decoration:none;">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=CharlesFreitas-DEV&repo=IoT&theme=tokyonight&border_radius=20&bg_color=1e1e2f&title_color=ffffff&show_owner=true" style="filter: drop-shadow(3px 3px 5px rgba(0,0,0,0.5)); transition: transform 0.2s;" />
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=CharlesFreitas-DEV&repo=IoT&theme=tokyonight&border_radius=20&bg_color=1e1e2f&title_color=ffffff&show_owner=true" class="repos" />
 </a>
 </p>
 
@@ -106,7 +166,7 @@ Professor de programação focado em:
 </p>
 
 <div class="badges" align="center">
-  <a href="https://instagram.com/charlesfreitas.dev" target="_blank">
+  <a href="https://instagram.com/SEU_INSTAGRAM" target="_blank">
     <img src="https://img.shields.io/badge/Instagram-%23E1306C?style=plastic&logo=instagram&logoColor=white&logoWidth=50" />
   </a>
   <a href="https://github.com/CharlesFreitas-DEV" target="_blank">
