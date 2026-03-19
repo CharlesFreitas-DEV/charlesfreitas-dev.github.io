@@ -55,7 +55,7 @@
     justify-content: center;
     gap: 30px;
     margin: 20px 0;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* permite empilhar em telas pequenas */
   }
 
   .sobre-list {
@@ -79,7 +79,7 @@
 
   .sobre-photo img {
     border-radius: 20px;
-    max-width: 200px;
+    width: 200px; /* redimensiona proporcionalmente */
     height: auto;
     object-fit: cover;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -127,7 +127,7 @@
 <div class="sobre-container">
   <!-- Foto -->
   <div class="sobre-photo">
-    <img src="SUA_FOTO_URL_AQUI" alt="Foto do CharlesFreitas DEV">
+    <img src="foto_perfil_png_2.png" alt="Foto do CharlesFreitas DEV">
   </div>
 
   <!-- Lista de tópicos -->
